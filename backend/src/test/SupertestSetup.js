@@ -2,6 +2,7 @@ import express from 'express';
 import request from 'supertest';
 import * as bodyParser from 'body-parser';
 import { heroesRouter } from '../modules/hero-module/router';
+import { questsRouter } from '../modules/quest-module/router';
 
 /**
  * Sets up supertest to use in jest spec files.  Heroes module
@@ -16,9 +17,18 @@ export function supertestSetup(router) {
     app.use(bodyParser.urlencoded({ extended: true }));
 
     app.use(heroesRouter());
+    app.use(questsRouter());
+
     if (router) {
         app.use(router);
     }
 
     return request(app);
 }
+   
+//     if (router) {
+//         app.use(router);
+// }
+
+    //return request(app);
+

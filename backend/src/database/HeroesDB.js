@@ -36,7 +36,7 @@ export class HeroesDB {
     }
 
     /**
-     * Adds a hero to the database
+     * Create a hero to the database
      * 
      * @param {Hero} hero The hero to add to the database
      */

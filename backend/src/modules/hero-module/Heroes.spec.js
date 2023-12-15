@@ -40,7 +40,7 @@ describe('Heroes Module', () => {
         it('should return a 201 for complete hero', done => {
             request.post('/heroes')
                 .send({
-                    name: 'Gandalf',
+                    name: 'John Doe',
                     class: 'Mage',
                     level: 100,
                 })
@@ -48,11 +48,11 @@ describe('Heroes Module', () => {
         });
     });
 
-    describe(`PATCH /heroes/:id`, () => {
+    describe('PATCH /heroes/:id', () => {
         it('should return a 204 for a updated hero', done => {
             request.patch(`/heroes/${ID}`)
                 .send({
-                    name: 'Conan'
+                    name: 'Jane Doe'
                 })
                 .expect(204, done);
         });

@@ -4,13 +4,13 @@ export class Hero {
     /**
      * Creates a new hero object
      * 
-     * @param {*} args A object containing hero properties
+     * @param {*} args An object containing hero properties
      */
     constructor(args) {
         this.id = uuid();
         this.name = args.name || 'John Doe';
-        this.class = args.class || 'Fighter';
-        this.level = args.level || 1;
+        this.class = args.class || 'Mage';
+        this.level = args.level || 100;
     }
 
     /**
